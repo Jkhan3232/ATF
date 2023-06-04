@@ -23,7 +23,7 @@
             <h6>
               <a
                 class="nav-item nav-link text-bg-dark mx-2 my-2 border border-white"
-                >LOGOUT</a
+                (click)="empLogout()" >LOGOUT</a
               >
             </h6>
           </li>
@@ -196,30 +196,30 @@
             <div class="col-sm-8">
               <div class="card-block">
                 <h4 class="m-b-20 p-b-5 b-b-default f-w-600">Your Deteails</h4>
-                <div class="row">
-                  <div class="col-sm-6 border py-3">
+                <div class="row" *ngFor="let emp of empdata.data">
+                  <div class="col-sm-6 border py-3" >
                     <h4 class="m-b-10 f-w-600">First Name</h4>
-                    <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                    <h6 class="text-muted f-w-400">{{emp.firstname}}</h6>
                   </div>
                   <div class="col-sm-6 border py-3">
                     <h4 class="m-b-10 f-w-600 h">Last Name</h4>
-                    <h6 class="text-muted f-w-400">98979989898</h6>
+                    <h6 class="text-muted f-w-400">{{emp.lastname}}</h6>
                   </div>
                   <div class="col-sm-6 border py-3">
                     <h4 class="m-b-10 f-w-600">Email</h4>
-                    <h6 class="text-muted f-w-400">98979989898</h6>
+                    <h6 class="text-muted f-w-400">{{emp.email}}</h6>
                   </div>
                   <div class="col-sm-6 border py-3">
                     <h4 class="m-b-10 f-w-600">Designation</h4>
-                    <h6 class="text-muted f-w-400">98979989898</h6>
+                    <h6 class="text-muted f-w-400">{{emp.designation}}</h6>
                   </div>
                   <div class="col-sm-6 border py-3">
                     <h4 class="m-b-10 f-w-600">Phone</h4>
-                    <h6 class="text-muted f-w-400">98979989898</h6>
+                    <h6 class="text-muted f-w-400">{{emp.phone}}</h6>
                   </div>
                   <div class="col-sm-6 border py-3">
                     <h4 class="m-b-10 f-w-600">Password</h4>
-                    <h6 class="text-muted f-w-400">98979989898</h6>
+                    <h6 class="text-muted f-w-400">{{emp.pass}}</h6>
                   </div>
                   <div class="col-sm-6 border py-3">
                     <button

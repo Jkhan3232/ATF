@@ -6,6 +6,7 @@ import {EmpDataService} from "../services/emp-data.service"
 import { BehaviorSubject } from 'rxjs';
 
 
+
 @Component({
   selector: 'app-employee-profile',
   templateUrl: './employee-profile.component.html',
@@ -25,26 +26,33 @@ export class EmployeeProfileComponent {
   designation: "",
   password : ""
   }
-  empdata : any={}
-  empId: any = '';
+  empdata : any = ""
+  empId: any = {}
   constructor (private router : Router ,private singleEmp: EmpDataService, private http: HttpClient,){ }
 
  ngOnInit(): void {
   this.empId = localStorage.getItem("id")
   this.getempData()
   // console.log(this.empId);
-
  }
  getempData(){
-  this.singleEmp.getSingleEmp(this.empId).subscribe((data ) => {
-    this.empdata=data
+  this.singleEmp.getSingleEmp(this.empId).subscribe((data : {}) => {
+    this.empdata= data
     console.log(data);
 
   })
  }
 
 
-
-
-
+empLogout(){
+  this.singleEmp.emplogout().subscribe((data) =>{
+    console.log(data);
+    localStorage.removeItem("token")
+    this.router.navigate(['adminlogin'])
+  })
 }
+}
+
+
+
+

@@ -48,10 +48,19 @@ adminlogout(){
   return this.http.get("http://localhost:4500/api/emp/admin_logout")
 }
 
+emplogout(){
+  return this.http.get("http://localhost:4500/api/emp/emp_logout")
+}
+
 deleteUser(id: UpdateId){
     let API_URL = `http://localhost:4500/api/emp/deleteUser/${id}`;
     return this.http
       .delete(API_URL);
   }
+
+  uploadFile(){
+    return this.http.get("http://localhost:4500/api/emp/upload")
+  }
+
 }
 
