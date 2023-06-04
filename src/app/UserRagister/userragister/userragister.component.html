@@ -1,0 +1,230 @@
+<!-- <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row dflex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5 mx-5">
+          <div class="card shadow-2-strong bg-info" style="border-radius: 1rem" >
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-3">USER RAGISTER</h3>
+              <form #empRagister= "ngForm" (ngSubmit)="register(empRagister.value)">
+              <div class="form-outline mb-4">
+                <input
+                  type="text"
+                  ngModel
+
+                  class="form-control form-control-lg"
+                  placeholder="FIRSTNAME"
+                  name="firstname"
+                  value=""
+                />
+              </div>
+              <div class="form-outline mb-4">
+                <input
+                  type="text"
+                  ngModel
+
+                  class="form-control form-control-lg"
+                  placeholder="LASTNAME"
+                  name="lastname"
+                  value=""
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input
+                  type="email"
+                  ngModel
+                  class="form-control form-control-lg"
+                  placeholder="EMAIL"
+                  name="email"
+                  value=""
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input
+                  type="number"
+                  ngModel
+                  class="form-control form-control-lg"
+                  placeholder="PHONR NO.."
+                  name="phone"
+                  value=""
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input
+                  type="text"
+                  ngModel
+
+                  class="form-control form-control-lg"
+                  placeholder="DESIGNATION"
+                  name="designation"
+                  value=""
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  ngModel
+
+                  class="form-control form-control-lg"
+                  placeholder="PASSWORD"
+                  name="password"
+                  value=""
+                />
+
+              </div>
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  ngModel
+
+                  class="form-control form-control-lg"
+                  placeholder="CONFRIMPASSWORD"
+                  name="confirmPassword"
+                  value=""
+                />
+              </div> -->
+              <!-- <div class="form-check form-check-inline mb-4">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+                <input
+                  class="form-check-input"
+                  [(ngModel)]="male"
+
+                  type="radio"
+                  name="male"
+                  id="inlineRadio1"
+                  value="option1"
+                />
+              </div>
+
+              <div class="form-check form-check-inline mb-4">
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option2"
+                />
+              </div> -->
+
+              <!-- <button class="btn btn-primary btn-lg btn-block"   type="submit">
+                register
+              </button>
+
+            </form>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ -->
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <section class="vh-100  py-5">
+    <div class="container mb-5 h-100 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-6">
+          <form #empRagister= "ngForm" (ngSubmit)="register(empRagister.value)">
+          <div class="card px-5 py-5">
+            <h3 class="mb-3 text-center">USER REGISTER</h3>
+            <div class="form-input">
+              <i class="fa fa-user"></i>
+              <input
+                  type="text"
+                  ngModel
+                  class="form-control form-control-lg text-white"
+                  placeholder="FIRSTNAME"
+                  name="firstname"
+                  value=""
+                />
+            </div>
+
+            <div class="form-input">
+              <i class="fa fa-user"></i>
+              <input
+              type="text"
+              ngModel
+              class="form-control form-control-lg text-white"
+              placeholder="LASTNAME"
+              name="lastname"
+              value=""
+            />
+            </div>
+
+            <div class="form-input">
+              <i class="fa fa-envelope"></i>
+              <input
+              type="email"
+              ngModel
+              class="form-control form-control-lg text-white"
+              placeholder="EMAIL"
+              name="email"
+              value=""
+            />
+            </div>
+
+            <div class="form-input">
+              <i class="fa fa-phone"></i>
+              <input
+              type="number"
+              ngModel
+              class="form-control form-control-lg text-white"
+              placeholder="PHONR NO.."
+              name="phone"
+              value=""
+            />
+            </div>
+
+
+            <div class="form-input">
+              <i class="fa fa-code"></i>
+              <input
+              type="text"
+              ngModel
+              class="form-control form-control-lg text-white"
+              placeholder="DESIGNATION"
+              name="designation"
+              value=""
+            />
+            </div>
+
+            <div class="form-input">
+              <i class="fa fa-lock"></i>
+              <input
+              type="password"
+              ngModel
+              class="form-control form-control-lg text-white"
+              placeholder="PASSWORD"
+              name="password"
+              value=""
+            />
+            </div>
+
+            <div class="form-input">
+              <i class="fa fa-lock"></i>
+              <input
+              type="password"
+              ngModel
+              class="form-control form-control-lg text-white"
+              placeholder="CONFRIMPASSWORD"
+              name="confirmPassword"
+              value=""
+            />
+            </div>
+      <!-- <div class="form-input">
+        <i class="fa fa-calendar"></i>
+        <input id="textinput" name="textinput" type="date" placeholder="Joining Date" class="form-control input-md text-white">
+      </div> -->
+            <button class="btn  mt-4 signup" type="submit">RAGISTER</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+

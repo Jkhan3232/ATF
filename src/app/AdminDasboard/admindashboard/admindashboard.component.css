@@ -1,0 +1,10 @@
+ .nav_bg_color {
+  background: rgb(149, 51, 21);
+  background: linear-gradient(
+    128deg,
+    rgba(255, 255, 255, 0.89) 16%,
+    rgba(0, 0, 0, 0.231) 50%,
+    rgb(33, 116, 157) 79%
+  );
+  padding: 15px;
+ }

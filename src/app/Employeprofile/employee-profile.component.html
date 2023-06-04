@@ -1,0 +1,181 @@
+
+
+<!-- <nav class="navbar bg-info">
+    <div class="container-fluid px-5 py-2">
+        <h2>ATF LABS</h2>
+
+
+
+    </div>
+  </nav> -->
+  <nav class="navbar bg-info p-3">
+    <div>
+        <h2>ATF LABS</h2>
+    </div>
+  </nav>
+  <div class="container-xl">
+    <!-- Account page navigation-->
+
+
+    <hr class="mt-0 mb-4">
+    <div class="row">
+
+        <div class="col-xl">
+            <!-- Account details card-->
+            <div class="card mb-4">
+                <div class="card-header">Employee PROFILE</div>
+                <div class="card-body">
+                  <div class="container-fluid">
+                    <div class="col-lg-12">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Employee Id</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Designation</th>
+                            <th scope="col">Phone</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let emp of empdata.data ">
+
+
+
+                            <td>{{emp.firstname}}</td>
+                            <td>{{emp.lastname}}</td>
+                            <td>{{emp.email}}</td>
+                            <td>{{emp.designation}}</td>
+                            <td>{{emp.phone}}</td>
+                            <td>{{emp.password}}</td>
+
+
+                            <td>
+                               <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" > Edit </button>
+                             </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- Button trigger modal -->
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" *ngIf="isEdit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="form-outline mb-4">
+                                <input
+                                  type="text"
+                                  [(ngModel)]="employeUpate.firstname"
+                                  #firstname
+                                  class="form-control form-control-lg"
+                                  placeholder="FIRSTNAME"
+                                  name="firstname"
+                                  value=""
+                                />
+                              </div>
+                              <div class="form-outline mb-4">
+                                <input
+                                  type="text"
+                                  [(ngModel)]="employeUpate.lastname"
+                                  #lastname
+                                  class="form-control form-control-lg"
+                                  placeholder="LASTNAME"
+                                  name="lastname"
+                                  value=""
+                                />
+                              </div>
+
+                              <div class="form-outline mb-4">
+                                <input
+                                  type="email"
+                                  [(ngModel)] = "employeUpate.email"
+                                  #email
+                                  class="form-control form-control-lg"
+                                  placeholder="EMAIL"
+                                  name="email"
+                                  value=""
+                                />
+                              </div>
+
+                              <div class="form-outline mb-4">
+                                <input
+                                  type="number"
+                                  [(ngModel)]="employeUpate.phone"
+                                  #phone
+                                  class="form-control form-control-lg"
+                                  placeholder="PHONR NO.."
+                                  name="phone"
+                                  value=""
+                                />
+                              </div>
+
+                              <div class="form-outline mb-4">
+                                <input
+                                  type="text"
+                                  [(ngModel)] = "employeUpate.designation"
+                                  #designation
+                                  class="form-control form-control-lg"
+                                  placeholder="DESIGNATION"
+                                  name="designation"
+                                  value=""
+                                />
+                              </div>
+
+                              <div class="form-outline mb-4">
+                                <input
+                                  type="password"
+                                  [(ngModel)]="employeUpate.password "
+                                  #password
+                                  class="form-control form-control-lg"
+                                  placeholder="PASSWORD"
+                                  name="password"
+                                  value=""
+                                />
+
+                              </div>
+
+                              <!-- <div class="form-check form-check-inline mb-4">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                                <input
+                                  class="form-check-input"
+                                  [(ngModel)]="male"
+
+                                  type="radio"
+                                  name="male"
+                                  id="inlineRadio1"
+                                  value="option1"
+                                />
+                              </div>
+
+                              <div class="form-check form-check-inline mb-4">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="inlineRadio2"
+                                  value="option2"
+                                />
+                              </div> -->
+                              <input class="btn btn-primary btn-lg btn-block"  value="Update" type="submit">
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<!-- <section class="vh-100" style="background-color: #508bfc">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem">
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-3">EMPLOYEE LOGIN</h3>
+              <form>
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    [(ngModel)]="email"
+                    [ngModelOptions]="{standalone: true}"
+                    class="form-control form-control-lg"
+                    placeholder="EMAIL"
+                    name="email"
+                    value=""
+                  />
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    [(ngModel)]="password"
+                    [ngModelOptions]="{standalone: true}"
+                    class="form-control form-control-lg"
+                    placeholder="PASSWORD"
+                    name="password"
+                    value=""
+                  />
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block" (click)="Login()" type="submit">
+                  LOGIN
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   -->
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <section class="vh-100  py-5">
+    <div class="container mb-5 h-100 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-6">
+          <form>
+          <div class="card px-5 py-5">
+            <h3 class="mb-3 text-center">USER LOGIN</h3>
+            <div class="form-input">
+              <i class="fa fa-envelope"></i>
+
+              <input
+              type="email"
+              [(ngModel)]="email"
+              [ngModelOptions]="{standalone: true}"
+              class="form-control form-control-lg text-white"
+              placeholder="USER EMAIL"
+              name="email"
+              value=""
+            />
+            </div>
+
+
+            <div class="form-input">
+              <i class="fa fa-lock"></i>
+              <input
+                  type="password"
+                  [(ngModel)]="password"
+                  [ngModelOptions]="{standalone: true}"
+                  class="form-control form-control-lg text-white"
+                  placeholder="USER PASSWORD"
+                  name="password"
+                  value=""
+                />
+            </div>
+
+
+      <!-- <div class="form-input">
+        <i class="fa fa-calendar"></i>
+        <input id="textinput" name="textinput" type="date" placeholder="Joining Date" class="form-control input-md text-white">
+      </div> -->
+      <button class="btn signup btn-lg btn-block" (click)="Login()" type="submit">
+        LOGIN
+      </button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
