@@ -1,27 +1,44 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
-
-<!-- <nav class="navbar bg-info">
-    <div class="container-fluid px-5 py-2">
-        <h2>ATF LABS</h2>
-
-
-
-    </div>
-  </nav> -->
-  <nav class="navbar bg-info p-3">
-    <div>
-        <h2>ATF LABS</h2>
+<div>
+  <nav class="navbar navbar-expand-lg nav_bg_color">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <h3>ATF LABS</h3>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <li class="nav-item mx-2 text-center">
+            <h6>
+              <a
+                class="nav-item nav-link text-bg-dark mx-2 my-2 border border-white"
+                >LOGOUT</a
+              >
+            </h6>
+          </li>
+        </div>
+      </div>
     </div>
   </nav>
-  <div class="container-xl">
+</div>
+<!-- <div class="container-xl">
     <!-- Account page navigation-->
 
-
-    <hr class="mt-0 mb-4">
-    <div class="row">
+<!-- <div class="row">
 
         <div class="col-xl">
-            <!-- Account details card-->
+
             <div class="card mb-4">
                 <div class="card-header">Employee PROFILE</div>
                 <div class="card-body">
@@ -42,8 +59,6 @@
                         <tbody>
                             <tr  *ngFor="let emp of empdata.data ">
 
-
-
                             <td>{{emp.firstname}}</td>
                             <td>{{emp.lastname}}</td>
                             <td>{{emp.email}}</td>
@@ -59,10 +74,10 @@
                         </tbody>
                       </table>
                     </div>
-                    <!-- Button trigger modal -->
 
 
-                    <!-- Modal -->
+
+
                     <div class="modal fade" *ngIf="isEdit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -143,29 +158,7 @@
 
                               </div>
 
-                              <!-- <div class="form-check form-check-inline mb-4">
-                                <label class="form-check-label" for="inlineRadio1">Male</label>
-                                <input
-                                  class="form-check-input"
-                                  [(ngModel)]="male"
 
-                                  type="radio"
-                                  name="male"
-                                  id="inlineRadio1"
-                                  value="option1"
-                                />
-                              </div>
-
-                              <div class="form-check form-check-inline mb-4">
-                                <label class="form-check-label" for="inlineRadio2">Female</label>
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  name="inlineRadioOptions"
-                                  id="inlineRadio2"
-                                  value="option2"
-                                />
-                              </div> -->
                               <input class="btn btn-primary btn-lg btn-block"  value="Update" type="submit">
 
                           </div>
@@ -178,4 +171,169 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex mx-auto justify-content-center border">
+      <div class="col-xl-10 col-12 m-5">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center text-white">
+                <div class="m-b-25">
+                  <img
+                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                    class="img-radius"
+                    alt="User-Profile-Image"
+                    width="50%"
+                  />
+                </div>
+                <!-- <h6 class="f-w-600">Hembo Tingor</h6>
+                <p>Web Designer</p> -->
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <h4 class="m-b-20 p-b-5 b-b-default f-w-600">Your Deteails</h4>
+                <div class="row">
+                  <div class="col-sm-6 border py-3">
+                    <h4 class="m-b-10 f-w-600">First Name</h4>
+                    <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <h4 class="m-b-10 f-w-600 h">Last Name</h4>
+                    <h6 class="text-muted f-w-400">98979989898</h6>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <h4 class="m-b-10 f-w-600">Email</h4>
+                    <h6 class="text-muted f-w-400">98979989898</h6>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <h4 class="m-b-10 f-w-600">Designation</h4>
+                    <h6 class="text-muted f-w-400">98979989898</h6>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <h4 class="m-b-10 f-w-600">Phone</h4>
+                    <h6 class="text-muted f-w-400">98979989898</h6>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <h4 class="m-b-10 f-w-600">Password</h4>
+                    <h6 class="text-muted f-w-400">98979989898</h6>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <button
+                      class="btn p-2 border border-white btn-dark"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      Edit Profile
+                    </button>
+                  </div>
+                  <div class="col-sm-6 border py-3">
+                    <input type="file" name="File" id="" value="File" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header nav_bg_color">
+        <button
+          type="button"
+          class="btn-close btn-danger"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body nav_bg_color">
+        <div class="card_modal px-5 py-5">
+          <h3 class="mb-3 text-center">Edit Your Profile</h3>
+          <form #updateEploye="ngForm">
+          <div class="form-input">
+            <i class="fa fa-user"></i>
+            <input
+              type="text"
+              [(ngModel)]="employeUpate.firstname"
+              #firstname
+              class="form-control form-control-lg"
+              placeholder="First Name"
+              name="firstname"
+              value=""
+            />
+          </div>
+
+          <div class="form-input">
+            <i class="fa fa-user"></i>
+            <input
+              type="text"
+              [(ngModel)]="employeUpate.lastname"
+              #lastname
+              class="form-control form-control-lg"
+              placeholder="Last Name"
+              name="lastname"
+              value=""
+            />
+          </div>
+
+          <div class="form-input">
+            <i class="fa fa-envelope"></i>
+            <input
+              type="text"
+              [(ngModel)]="employeUpate.email"
+              #email
+              class="form-control form-control-lg"
+              placeholder="Email"
+              name="email"
+              value=""
+            />
+          </div>
+
+          <div class="form-input">
+            <i class="fa fa-phone"></i>
+            <input
+              type="text"
+              [(ngModel)]="employeUpate.designation"
+              #designation
+              class="form-control form-control-lg"
+              placeholder="Designation"
+              name="designation"
+              value=""
+            />
+          </div>
+
+          <div class="form-input">
+            <i class="fa fa-lock"></i>
+            <input
+            type="text"
+            [(ngModel)]="employeUpate.password"
+            #password
+            class="form-control form-control-lg"
+            placeholder="Password"
+            name="password"
+            value=""
+          />
+          </div>
+          <button class="btn mt-4 signup"  type="submit">Update</button>
+        </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 </div>

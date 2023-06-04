@@ -1,12 +1,8 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+
+
 <div>
 <nav class="navbar navbar-expand-lg nav_bg_color">
       <div class="container-fluid">
@@ -63,96 +59,105 @@
 
 
 <!-- Modal -->
- <div class="modal fade" *ngIf="isEdit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Update</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div
+class="modal fade"
+id="exampleModal"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header nav_bg_color">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body nav_bg_color">
+      <div class="card_modal px-5 py-5">
+      <h3 class="mb-3 text-center">Edit Your Profile</h3>
+      <form  #updateEploye="ngForm" (ngSubmit)="updateEmp()">
+        <div class="form-input">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            [(ngModel)]="employeUpate.firstname"
+            #firstname
+            class="form-control form-control-lg text-white text-white"
+            placeholder="First Name"
+            name="firstname"
+            value=""
+          />
+        </div>
+
+        <div class="form-input">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            [(ngModel)]="employeUpate.lastname"
+            #lastname
+            class="form-control form-control-lg text-white"
+            placeholder="Last Name"
+            name="lastname"
+            value=""
+          />
+        </div>
+
+        <div class="form-input">
+          <i class="fa fa-envelope"></i>
+          <input
+            type="text"
+            [(ngModel)]="employeUpate.email"
+            #email
+            class="form-control form-control-lg text-white"
+            placeholder="Email"
+            name="email"
+            value=""
+          />
+        </div>
+
+        <div class="form-input">
+          <i class="fa fa-phone"></i>
+          <input
+            type="text"
+            [(ngModel)]="employeUpate.designation"
+            #designation
+            class="form-control form-control-lg text-white"
+            placeholder="Designation"
+            name="designation"
+            value=""
+          />
+        </div>
+
+        <div class="form-input">
+          <i class="fa fa-lock"></i>
+          <input
+          type="text"
+          [(ngModel)]="employeUpate.password"
+          #password
+          class="form-control form-control-lg text-white"
+          placeholder="Password"
+          name="password"
+          value=""
+        />
+        </div>
+
+        <button class="btn mt-4 signup"  type="submit">Update</button>
+  </form>
+
       </div>
-      <div class="modal-body" >
-        <form  #updateEploye="ngForm" (ngSubmit)="updateEmp()">
-          <div class="form-outline mb-4">
-            <input
-              type="text"
-              [(ngModel)] = "employeUpate.firstname"
-              class="form-control form-control-lg"
-              placeholder="FIRSTNAME"
-              name="firstname"
-              value=""
-            />
-          </div>
-          <div class="form-outline mb-4">
-            <input
-              type="text"
-              [(ngModel)]="employeUpate.lastname"
-              class="form-control form-control-lg"
-              placeholder="LASTNAME"
-              name="lastname"
-              value=""
-            />
-          </div>
-
-          <div class="form-outline mb-4">
-            <input
-              type="email"
-              [(ngModel)] = "employeUpate.email"
-              class="form-control form-control-lg"
-              placeholder="EMAIL"
-              name="email"
-              value=""
-            />
-          </div>
-
-          <div class="form-outline mb-4">
-            <input
-              type="number"
-              [(ngModel)]="employeUpate.phone"
-              #phone
-              class="form-control form-control-lg"
-              placeholder="PHONR NO.."
-              name="phone"
-              value=""
-            />
-          </div>
-
-          <div class="form-outline mb-4">
-            <input
-              type="text"
-              [(ngModel)] = "employeUpate.designation"
-              #designation
-              class="form-control form-control-lg"
-              placeholder="DESIGNATION"
-              name="designation"
-              value=""
-            />
-          </div>
-
-          <div class="form-outline mb-4">
-            <input
-              type="password"
-              [(ngModel)]="employeUpate.password "
-              #password
-              class="form-control form-control-lg"
-              placeholder="PASSWORD"
-              name="password"
-              value=""
-            />
-
-          </div>
-
-  
-          <input class="btn btn-primary btn-lg btn-block"  value="Update" type="submit">
-        </form>
-      </div>
-
     </div>
   </div>
+
+</div>
 </div>
 </div>
 
-</body>
-</html>
+
+
 
 
 
